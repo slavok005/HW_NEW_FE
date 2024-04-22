@@ -1,7 +1,8 @@
  1 уровень сложности: В рамках БД "песочница" напишите след/запросы:
 
 (1) Вывести данные о товарах (проекция: названиетовара, цена, названиекатегории, названиекомпаниипоставщика)
-SELECT Products.ProductName,
+SELECT
+Products.ProductName,
 Products.Price, 
 Categories.CategoryName,
 Suppliers.SupplierName
@@ -9,6 +10,14 @@ FROM Products
 JOIN Categories ON Products.CategoryID = Categories.CategoryID
 
 (2) Вывести список стран, которые поставляют морепродукты
+SELECT DISTINCT
+Country 
+FROM Suppliers
+JOIN Products ON Suppliers.SupplierID =  Products.SupplierID
+Where
+CategoryID = 8
+
+
 (3) Вывести два самых дорогих товара из категории Beverages из USA
 SELECT
 Products.ProductName,
