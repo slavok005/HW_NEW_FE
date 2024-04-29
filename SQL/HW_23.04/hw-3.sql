@@ -29,13 +29,15 @@ WHERE Products.CategoryID = 1
 AND Suppliers.Country = 'USA'
 ORDER BY Products.Price DESC;
 (4) Вывести название и стоимость в USD одного самого дорогого проданного товара
-SELECT 
-Products.ProductName,
-Price  * 1.07 AS Price_USD
-FROM Products
-ORDER BY Price DESC
-LIMIT 1 OFFSET 1
+SELECT
+	Products.ProductName,
+	Products.Price * 1.07 Price_usd
+FROM OrderDetails
 
+JOIN Products ON Products.ProductID = OrderDetails.ProductID
+
+ORDER BY Price DESC
+LIMIT 1
 (5) Дайте короткий ответ на вопрос: в чем отличие БД от СУБД
 
 База данных (БД) - это организованная коллекция данных, а Система управления базами данных (СУБД) - это программное обеспечение, которое обеспечивает доступ, управление и обработку этих данных. Таким образом, основное отличие заключается в том, что БД представляет собой сами данные, в то время как СУБД представляет собой программное обеспечение для работы с этими данными.
