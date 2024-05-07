@@ -45,45 +45,45 @@
 // Создайте функцию clearDataCards(array), которая будет получать в качестве аргумента массив и реализует очистку данных. Каждый номер карты нужно переопределить, заменив первые и последние 4 цифры на звездочки
 // по примеру ниже (должна вывести в консоль МАССИВ, а не элементы массива):
 
-// function clearDataCards(array) {
-//     return array.map(card => {
-//         let firstPart = card.slice(0, 4);
-//         let lastPart = card.slice(-4);
-//         let maskedPart = card.slice(4, -4).replace(/\d/g, '*');
-//         return firstPart + maskedPart + lastPart;
-//     });
-// }
+function clearDataCards(array) {
+    return array.map(card => {
+        let firstPart = card.slice(0, 4);
+        let lastPart = card.slice(-4);
+        let maskedPart = card.slice(4, -4).replace(/\d/g, '*');
+        return firstPart + maskedPart + lastPart;
+    });
+}
 
-// let cards = [ 
-//     '4000 0012 0056 9499', 
-//     '4000 0013 5456 7379', 
-//     '4000 0014 1456 9869', 
-//     '4000 0015 3466 7859',
-//     '4000 0016 3556 6899', 
-//     '4000 0017 4456 4699' 
-// ];
+let cards = [ 
+    '4000 0012 0056 9499', 
+    '4000 0013 5456 7379', 
+    '4000 0014 1456 9869', 
+    '4000 0015 3466 7859',
+    '4000 0016 3556 6899', 
+    '4000 0017 4456 4699' 
+];
 
-// console.log(clearDataCards(cards));
+console.log(clearDataCards(cards));
 //-----------------------------
 // Задан массив elems, передающий элемент HTML разметки. 
 // Создайте функцию clearData(array), которая будет получать в качестве аргумента массив и реализует очистку данных по примеру ниже (должна вывести в консоль МАССИВ, а не элементы массива):
 
-function clearData(array) {
-    return array.map(elem => {
-        let startIndex = elem.indexOf('>') + 1;
-        let endIndex = elem.lastIndexOf('<');
-        return elem.substring(startIndex, endIndex);
-    });
-}
-let elems = [
-'<div><p class="text">Home</p></div>', 
-'<div><p class="text">About</p></div>', 
-'<div><p class="text">FAQ</p></div>', 
-'<div><p class="text">Contacts</p></div>' 
-] 
+// function clearData(array) {
+//     return array.map(elem => {
+//         let startIndex = elem.indexOf('>') + 1;
+//         let endIndex = elem.lastIndexOf('<');
+//         return elem.substring(startIndex, endIndex);
+//     });
+// }
+// let elems = [
+// '<div><p class="text">Home</p></div>', 
+// '<div><p class="text">About</p></div>', 
+// '<div><p class="text">FAQ</p></div>', 
+// '<div><p class="text">Contacts</p></div>' 
+// ] 
 
-// clearData(array)
+// // clearData(array)
 
-	// Результат: ['Home','About','FAQ','Contacts']
+// 	// Результат: ['Home','About','FAQ','Contacts']
 
-console.log(clearData(elems));
+// console.log(clearData(elems));

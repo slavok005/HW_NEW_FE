@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+  }
+  .header{
+    Width: 1920px;
+    Height: 740px;
+    background-color: rgb(196, 235, 235);  }
+
+    h2{
+        text-align: center;
+        Font:Oswald;
+Weight:500px;
+Size:64px;
+line-height: 94px; 
+
+
+    }
+
+    .fonwais{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(centr);
+    Width:1110px;
+    Height: 300px;
+    Top: 440px;
+    Left: 405px;
+    background-color:white;
+    }
+    .konteiner{
+        background-color: brown;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        
+    }
+    p{
+        text-align: center;
+        font-size: 32px;
+
+        Height: 300px;
+        border: 1px solid black;
+        
+    }
