@@ -1,0 +1,50 @@
+Задача 1. Найти сумму трёх чисе
+
+1. Введите три числа: a, b, c
+2. Сумма = a + b + c
+3. Вывести сумму
+function findSum(a, b, c) {
+    return a + b + c;
+}
+
+let num1 = 5;
+let num2 = 10;
+let num3 = 15;
+
+let sum = findSum(num1, num2, num3);
+console.log("Сумма трех чисел:", sum); // Выведет: 30
+
+Задача 2. По двум заданным числам проверять является
+ ли одно квадратом другого
+1. Введите два числа: a, b
+2. Если a * a равно b, или b * b равно a, вернуть true
+3. В противном случае вернуть false
+function isOneSquareOfOther(a, b) {
+    return Math.sqrt(a) === b || Math.sqrt(b) === a;
+}
+
+let num1 = 16;
+let num2 = 4;
+
+let result = isOneSquareOfOther(num1, num2);
+console.log(result); // Выведет: true, так как 16 = 4^2
+
+Задача 3. На промежутке от 1 до N, показать кубы чисел
+ заканчивающихся на четную цифру
+1. Введите число N
+2. Для каждого числа i от 1 до N:
+   3. Если последняя цифра числа i четная:
+      4. Возвести i в куб
+      5. Вывести результат
+function showCubesWithEvenDigit(N) {
+    for (let i = 1; i <= N; i++) {
+        let lastDigit = i % 10;
+        if (lastDigit % 2 === 0) {
+            let cube = Math.pow(i, 3);
+            console.log("Число:", i, ", Куб:", cube);
+        }
+    }
+}
+
+let N = 20; // Примерное значение N
+showCubesWithEvenDigit(N);

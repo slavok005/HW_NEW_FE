@@ -39,3 +39,14 @@ SUM(Orders.CustomerID) AS TotalGermany
 FROM Orders
 JOIN Customers ON Orders.CustomerID = Customers.CustomerID
 WHERE Customers.Country = 'Germany'
+
+правильная задача
+-- 5. Вывести сумму, на которую было отправлено товаров клиентам в Germany.
+-- SELECT
+-- SUM(Price * Quantity) AS total_cost
+-- FROM Customers
+-- JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+-- JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID
+-- JOIN Products ON OrderDetails.ProductID = Products.ProductID
+-- WHERE
+-- Country = 'Germany'

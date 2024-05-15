@@ -11,10 +11,10 @@
 // Задача 2
 // Какое количество дней прошло с начала 2000 года до текущего момент времени?
 // Примечание: полученное значение округлите по правилам математики
-let currentTime = Date.now();
-let startYear2000 = new Date('2000-01-01').getTime();
-let daysPassed = Math.round((currentTime - startYear2000) / (1000 * 60 * 60 * 24));
-console.log(daysPassed);
+// let currentTime = new Date();
+// let startYear2000 = new Date('2000-01-01').getTime();
+// let daysPassed = Math.round((currentTime - startYear2000) / (1000 * 60 * 60 * 24));
+// console.log(daysPassed);
 // ---------------------------------
 // Задача 3. 
 // Напишите функцию getWeekDay(), которая в зависимости от даты 
@@ -39,8 +39,8 @@ console.log(daysPassed);
 // Напишите функцию checkDate() которая в консоль отобразит количество дней до конца текущего месяца. 
 // Примечание: инициализация дат должна быть внутри функции
 function checkDate() {
-    const currentDate = new Date();
-    const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+    let currentDate = new Date();
+    let lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
     const daysToEndOfMonth = lastDayOfMonth.getDate() - currentDate.getDate();
     console.log(`До конца текущего месяца осталось ${daysToEndOfMonth} дней`);
 }
