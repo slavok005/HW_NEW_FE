@@ -23,3 +23,13 @@ JOIN Products ON OrderDetails.ProductID = Products.ProductID
 GROUP BY Products.ProductName
 ORDER BY top_products DESC
 LIMIT 10;
+-- 4. Расчитать З/П менеджеров (ставка - 5% от суммы проданных заказов).
+SELECT
+Employees.EmployeeID,
+SUM(OrderDetails.Quantity * Products.Price) * 0.05 AS 'money'
+FROM Orders
+JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
+JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID
+JOIN Products ON Products.ProductID = OrderDetails.ProductID
+GROUP BY Employees.EmployeeID
+ORDER BY money DESC
